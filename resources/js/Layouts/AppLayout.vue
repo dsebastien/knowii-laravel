@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup
 import { ref } from 'vue';
 import { Head, Link, router } from '@inertiajs/vue3';
 import ApplicationMark from '@/Components/ApplicationMark.vue';

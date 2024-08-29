@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup
 import { computed, useSlots } from 'vue';
 import SectionTitle from './SectionTitle.vue';
 

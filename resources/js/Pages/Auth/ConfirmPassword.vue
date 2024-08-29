@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup
 import { ref } from 'vue';
 import { Head, useForm } from '@inertiajs/vue3';
 import AuthenticationCard from '@/Components/AuthenticationCard.vue';

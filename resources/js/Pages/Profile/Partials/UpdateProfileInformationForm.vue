@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup
 import { ref } from 'vue';
 import { Link, router, useForm } from '@inertiajs/vue3';
 import ActionMessage from '@/Components/ActionMessage.vue';
