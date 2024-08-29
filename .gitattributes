@@ -1,5 +1,8 @@
 * text=auto eol=lf
 
+# The above will handle all files NOT found below
+# These files are text and should be normalized (Convert crlf => lf)
+
 *.blade.php diff=html
 *.css diff=css
 *.html diff=html
@@ -9,3 +12,69 @@
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
+
+## Windows
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+*.ps1           text eol=crlf
+
+## AUDIO
+*.kar           binary
+*.m4a           binary
+*.mid           binary
+*.midi          binary
+*.mp3           binary
+*.ogg           binary
+*.ra            binary
+
+## VIDEO
+*.3gpp          binary
+*.3gp           binary
+*.as            binary
+*.asf           binary
+*.asx           binary
+*.fla           binary
+*.flv           binary
+*.m4v           binary
+*.mng           binary
+*.mov           binary
+*.mp4           binary
+*.mpeg          binary
+*.mpg           binary
+*.swc           binary
+*.swf           binary
+*.webm          binary
+
+## ARCHIVES
+*.7z            binary
+*.gz            binary
+*.rar           binary
+*.tar           binary
+*.zip           binary
+
+## FONTS
+*.ttf           binary
+*.eot           binary
+*.otf           binary
+*.woff          binary
+*.woff2         binary
+
+# Graphics
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.tif           binary
+*.tiff          binary
+*.ico           binary
+# SVG treated as an asset (binary) by default. If you want to treat it as text,
+# comment-out the following line and uncomment the line after.
+*.svg           binary
+#*.svg          text
+*.eps           binary
+
+# These files are binary and should be left untouched
+# (binary is a macro for -text -diff)
+*.class         binary
+*.jar           binary
+*.war           binary
