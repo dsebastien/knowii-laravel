@@ -5,6 +5,8 @@ services:
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
+                # Force a specific node version
+                NODE_VERSION: '20'
         image: sail-8.3/app
         extra_hosts:
             - 'host.docker.internal:host-gateway'
