@@ -1,6 +1,8 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Laravel
 /.phpunit.cache
 /bootstrap/ssr
-/node_modules
 /public/build
 /public/hot
 /public/storage
@@ -14,8 +16,50 @@
 Homestead.json
 Homestead.yaml
 auth.json
+/.fleet
+
+# compiled output
+tmp
+/out-tsc
+tsconfig.app.tsbuildinfo
+*.tsbuildinfo
+
+# dependencies
+node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
 npm-debug.log
 yarn-error.log
-/.fleet
-/.idea
-/.vscode
+testem.log
+/typings
+/.pnp
+.pnp.js
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# local env files
+# do not commit any .env files to git, except for the .env.example file.
+.env
+.env.*
