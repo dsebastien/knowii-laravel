@@ -14,6 +14,8 @@ Welcome to Knowii, the place for your Knowledge, Ideas and Innovation
 ### Environment setup
 Copy the `.env.example` file to `.env` and fill in the necessary values.
 
+Run `php artisan key:generate` to generate an encryption key.
+
 ## Docker usage
 During development, we use Laravel Sail with Docker and docker-compose.
 
