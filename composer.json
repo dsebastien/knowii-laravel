@@ -42,7 +42,7 @@
       "sail artisan cache:clear && sail artisan route:clear && sail artisan config:clear && sail artisan view:clear"
     ],
     "sail:clean": [
-      "sail down --volumes && sail build --no-cache"
+      "sail down --volumes && sail build --no-cache && sail up -d && sail artisan migrate --force"
     ],
     "serve": [
       "composer start"
