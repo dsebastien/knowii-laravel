@@ -1,5 +1,10 @@
 # TODO
 
+- Add Prime Vue
+- Add Prettier
+- Create DB model
+  - Db person profile: Always link resources to persons or orgs (n-n)
+  - Create "Default" collection automatically, and display those as cards
 - Find how to deploy to Laravel Forge
 - Create GH pipelines for tests
 - Create GH pipelines for deployment
@@ -14,3 +19,7 @@
 - Add CONTRIBUTING.md
 - Add knowii.code-workspace for vs code
 - Convert Vue component props to use TS. Example: `const props = defineProps<{ mustVerifyEmail: boolean, status: string, userTs: User }>();`
+- Configure logging: Configure logging: https://laravel.com/docs/11.x/logging
+- Add Sentry: https://sentry.io/for/laravel/
+- Add Sonar
+- Generate OpenAPI docs: https://github.com/DarkaOnLine/L5-Swagger

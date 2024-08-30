@@ -3,14 +3,18 @@
 TODO
 
 ## Installation
-Install
+
+### Pre-requisites
 - PHP
 - Composer
 - Docker
 - docker-compose
 - Sail
 
-## Docker
+### Environment setup
+Copy the `.env.example` file to `.env` and fill in the necessary values.
+
+## Docker usage
 During development, we use Laravel Sail with Docker and docker-compose.
 
 - To start the application, run `./vendor/bin/sail up` or `./vendor/bin/sail up -d` to run it as a daemon
