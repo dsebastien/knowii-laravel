@@ -58,6 +58,7 @@ return [
     */
 
     'features' => [
+        // FIXME enable terms and privacy policy
         // Features::termsAndPrivacyPolicy(),
         // Features::profilePhotos(),
         Features::api(),
