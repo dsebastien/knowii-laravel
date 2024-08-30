@@ -36,6 +36,17 @@ class JetstreamServiceProvider extends ServiceProvider
         Jetstream::removeTeamMembersUsing(RemoveTeamMember::class);
         Jetstream::deleteTeamsUsing(DeleteTeam::class);
         Jetstream::deleteUsersUsing(DeleteUser::class);
+
+        // Example of how to pass additional data to a Vue component (props)
+        // When rendered via Inertia
+        //Jetstream::inertia()->whenRendering(
+        //    'Profile/Show',
+        //    function (Request $request, array $data) {
+        //        return array_merge($data, [
+        //            // Custom data...
+        //        ]);
+        //    }
+        //);
     }
 
     /**
