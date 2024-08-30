@@ -13,6 +13,7 @@
   - `resources/js/Components/ApplicationMark.vue`
   - `resources/js/Components/AuthenticationCardLogo.vue`
   - `npm run build`
+- Define Tailwind colors, align with Prime Vue: https://primevue.org/theming/styled/#colors
 - Add socialite: https://laravel.com/docs/11.x/socialite
 - Add conventional commits, commitizen, etc
 - Add release-it (?)
@@ -24,3 +25,4 @@
 - Add Sentry: https://sentry.io/for/laravel/
 - Add Sonar
 - Generate OpenAPI docs: https://github.com/DarkaOnLine/L5-Swagger
+- Explore Tailwind passthrough with Prime Vue: https://tailwind.primevue.org/overview

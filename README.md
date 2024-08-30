@@ -22,6 +22,12 @@ During development, we use Laravel Sail with Docker and docker-compose.
 
 WARNING: After making changes to the Dockerfile, make sure to rebuild the container images using `./vendor/bin/sail build --no-cache`
 
+## Useful commands
+- `composer sail:cache:clean`: Clean the caches
+- `composer sail:clean`: Stop the application and rebuild the container images
+- `composer serve`: Start the application
+- `composer start`: Start the application
+
 ## Configuration
 
 ### Fortify
