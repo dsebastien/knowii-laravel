@@ -1,6 +1,6 @@
 # Knowii
 
-TODO
+Welcome to Knowii, the place for your Knowledge, Ideas and Innovation
 
 ## Installation
 
@@ -32,3 +32,9 @@ WARNING: After making changes to the Dockerfile, make sure to rebuild the contai
 
 ### Fortify
 See `./config/fortify.php` for configuration options.
+
+## Contributing
+Knowii is open source. We are always looking for new contributors. Check out the [contributing document](CONTRIBUTING.md) to know how.
+
+## License
+Knowii is licensed under the terms of the AGPL [open source license](LICENSE).

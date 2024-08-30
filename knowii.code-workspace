@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "name": "Root",
+      "path": "./"
+    },
+    {
+      "name": "backend",
+      "path": "./app"
+    },
+    {
+      "name": "config",
+      "path": "./config"
+    },
+    {
+      "name": "database",
+      "path": "./database"
+    },
+    {
+      "name": "frontend",
+      "path": "./resources"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+    }
+  }
+}
