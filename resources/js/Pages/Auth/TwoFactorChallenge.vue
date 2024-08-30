@@ -1,4 +1,4 @@
-<script lang="ts" setup
+<script lang="ts" setup>
 import { nextTick, ref } from 'vue';
 import { Head, useForm } from '@inertiajs/vue3';
 import AuthenticationCard from '@/Components/AuthenticationCard.vue';

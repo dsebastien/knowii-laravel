@@ -1,4 +1,4 @@
-<script lang="ts" setup
+<script lang="ts" setup>
 import { ref, computed, watch } from 'vue';
 import { router, useForm, usePage } from '@inertiajs/vue3';
 import ActionSection from '@/Components/ActionSection.vue';

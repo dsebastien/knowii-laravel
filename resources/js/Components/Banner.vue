@@ -1,4 +1,4 @@
-<script lang="ts" setup
+<script lang="ts" setup>
 import { ref, watchEffect } from 'vue';
 import { usePage } from '@inertiajs/vue3';
 

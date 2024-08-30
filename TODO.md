@@ -20,6 +20,7 @@
 - Add knowii.code-workspace for vs code
 - Convert Vue component props to use TS. Example: `const props = defineProps<{ mustVerifyEmail: boolean, status: string, userTs: User }>();`
 - Configure logging: Configure logging: https://laravel.com/docs/11.x/logging
+- Configure Prettier for PHP: https://github.com/prettier/plugin-php
 - Add Sentry: https://sentry.io/for/laravel/
 - Add Sonar
 - Generate OpenAPI docs: https://github.com/DarkaOnLine/L5-Swagger

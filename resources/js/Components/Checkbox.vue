@@ -1,4 +1,4 @@
-<script lang="ts" setup
+<script lang="ts" setup>
 import { computed } from 'vue';
 
 const emit = defineEmits(['update:checked']);
