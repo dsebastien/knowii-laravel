@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && vite build --ssr",
+    "sync": "git fetch upstream && git rebase upstream/main && git push --force",
     "tailwind": "tailwind --config ./tailwind.config.js",
     "tsc": "npx tsc --NoEmit",
     "tsc:watch": "npm run tsc -- --watch",
