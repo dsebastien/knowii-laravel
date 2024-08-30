@@ -16,7 +16,7 @@
     "release:beta": "release-it --preRelease=beta",
     "release:rc": "release-it --preRelease=rc",
     "sync": "git fetch upstream && git rebase upstream/main && git push --force",
-    "tailwind": "tailwind --config ./tailwind.config.js",
+    "tailwind": "tailwind --config ./tailwind.config.ts",
     "tsc": "npx tsc --NoEmit",
     "tsc:watch": "npm run tsc -- --watch",
     "tscw": "npm run tsc:watch"
