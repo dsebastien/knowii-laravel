@@ -13,6 +13,7 @@
   - `resources/js/Components/ApplicationMark.vue`
   - `resources/js/Components/AuthenticationCardLogo.vue`
   - `npm run build`
+- Define Tailwind config
 - Define Tailwind colors, align with Prime Vue: https://primevue.org/theming/styled/#colors
 - Add socialite: https://laravel.com/docs/11.x/socialite
 - Add conventional commits, commitizen, etc
