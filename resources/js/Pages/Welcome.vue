@@ -26,7 +26,7 @@ defineProps({
   <div class="bg-gray-50 text-black/80 full-page">
     <header className="p-4 md:p-6 lg:p-12 bg-gray-800 flex flex-col md:flex-row flex-wrap items-center justify-between">
       <ApplicationLogo class="min-h-full"/>
-      <div v-if="canLogin" class="mt-8 flex flex-row">
+      <div v-if="canLogin" class="flex flex-row">
         <Button v-if="$page.props.auth.user" class="text-3xl font-mono font-bold px-8">
           <Link
             :href="route('dashboard')"
@@ -59,7 +59,7 @@ defineProps({
       </div>
     </header>
 
-    <main class="mt-8 md:mt-12 lg:mt-16">
+    <main class="mt-8 md:mt-12 lg:mt-16 px-8 md:px-0">
       <div className="block flex flex-col items-center">
         <h1 className="text-primary-500">Welcome&nbsp;👋</h1>
         <h2 className="mt-4">Know<span class="text-primary-500">ii</span> is a place for your community's Knowledge,
