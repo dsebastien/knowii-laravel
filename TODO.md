@@ -27,3 +27,4 @@
 - Add Sonar
 - Generate OpenAPI docs: https://github.com/DarkaOnLine/L5-Swagger
 - Explore Tailwind passthrough with Prime Vue: https://tailwind.primevue.org/overview
+- Troubleshoot release and generate:changelog scripts
