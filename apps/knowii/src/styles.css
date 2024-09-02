@@ -1,8 +1,10 @@
 /*
  * Wrap Tailwind's base and utilities in separate layers
- * Reference: https://primevue.org/theming/styled/#libraries
+ * Reference: https://primereact.org/tailwind/#csslayer
  */
-@layer tailwind-base, primevue, tailwind-utilities;
+@layer tailwind-base, primereact, tailwind-utilities;
+
+@import 'primereact/resources/themes/lara-light-pink/theme.css' layer(primereact);
 
 @layer tailwind-base {
   @tailwind base;
@@ -35,7 +37,7 @@ body {
 html,
 body,
 body > div:first-child {
-  @apply h-dvh w-dvw antialiased m-0 p-0 text-base font-normal bg-gray-50; /* FIXME add font-app */
+  @apply h-dvh w-dvw antialiased m-0 p-0 text-base font-normal font-app bg-gray-50;
   -webkit-text-size-adjust: 100%;
   letter-spacing: -0.1px;
   /* Standard line height */

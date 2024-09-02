@@ -1,6 +1,5 @@
 import './bootstrap';
 import './styles.css';
-import 'primereact/resources/themes/lara-light-pink/theme.css';
 
 import React, { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
