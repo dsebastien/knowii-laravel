@@ -1,18 +1,12 @@
 # TODO
 
-- add prettier format
-- format using prettier
+- Recreate welcome page
+- Convert Vue component props to use TS. Example: `const props = defineProps<{ mustVerifyEmail: boolean, status: string, userTs: User }>();`
+- Remove @headlessui/react
 - review fixmes
 - npm dependency versions
-- index.d.ts
-- PagePros
-- tsconfig: "include": ["resources/js/**/*.ts", "resources/js/**/*.tsx", "resources/js/**/*.d.ts"]
-- Review CI config
 - update theme to match the PrimeReact theme: primereact/resources/themes/lara-light-pink/theme.css
-
 - TODO, persistent layout: https://inertiajs.com/pages
-- Convert Vue component props to use TS. Example: `const props = defineProps<{ mustVerifyEmail: boolean, status: string, userTs: User }>();`
-- Routing: https://github.com/tighten/ziggy?tab=readme-ov-file#react
 - Create DB model
   - Db person profile: Always link resources to persons or orgs (n-n)
   - Create "Default" collection automatically, and display those as cards
@@ -73,3 +67,14 @@ expect(common()).toEqual('common');
 });
 
 - Add prettier plugin for PHP once this is fixed: https://github.com/nrwl/nx/issues/21250#issuecomment-2324649563
+- Add Husky
+- Review CI config
+
+
+setup({ el, App, props }) {
+if (import.meta.env.DEV) {
+createRoot(el).render(<App {...props} />);
+return
+}
+
+        hydrateRoot(el, <App {...props} />);
