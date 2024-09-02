@@ -1,12 +1,14 @@
 # Add files here to ignore them from prettier formatting
 .devcontainer/
-.github/
 .idea/
 app/
 bootstrap/
 config/
 database/
-node_modules/
+/dist
+/coverage
+/.nx/cache
+/.nx/workspace-data
 public/
 routes/
 storage/
@@ -14,5 +16,3 @@ tests/
 /tmp
 .env.*
 *.sh
-pnpm-lock.yaml
-package-lock.json

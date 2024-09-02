@@ -6,16 +6,21 @@
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
         <!-- Scripts -->
         @routes
-        @vite(['resources/js/app.ts', "resources/js/Pages/{$page['component']}.vue"])
+        @viteReactRefresh
+
+        {{
+            // WARNING: All paths below are relative to the root /public folder
+            // Reference: https://laravel.com/api/11.x/Illuminate/Support/Facades/Vite.html
+            Vite::useManifestFilename('.vite/manifest.json')
+            ->withEntryPoints(["apps/knowii/src/main.tsx","apps/knowii/src/Pages/{$page['component']}.tsx"])
+        }}
+
         @inertiaHead
     </head>
     <body class="font-sans antialiased">
         @inertia
     </body>
+</html>
 </html>

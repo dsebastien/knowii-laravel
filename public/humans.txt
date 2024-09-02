@@ -16,9 +16,11 @@
   PHP
   Laravel
   Inertia
-  Vue.js
+  React
   Tailwind
   Sass
   PrimeVue
   PostgreSQL
+  Nrwl NX
+  Vite
   ...
