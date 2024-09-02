@@ -18,6 +18,7 @@ export default {
     join(__dirname, '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
     ...createGlobPatternsForDependencies(__dirname),
   ],
+  darkMode: ['class', '[data-theme="dark"]'],
   theme: {
     colors: theme.colors,
     extend: {
