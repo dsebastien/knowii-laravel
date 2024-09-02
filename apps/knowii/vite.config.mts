@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import type { UserConfig } from 'vite';
 
-console.log("Launching Vite build. Current directory: ", __dirname);
+//console.log("Launching Vite build. Current directory: ", __dirname);
 
 const buildFolder = '../../public/build';
 
