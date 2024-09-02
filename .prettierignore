@@ -1,18 +1,15 @@
 # Add files here to ignore them from prettier formatting
-.devcontainer/
-.idea/
-app/
-bootstrap/
-config/
-database/
+/.devcontainer
+/.idea
+/.nx
+/.vscode
+/assets
 /dist
 /coverage
 /.nx/cache
 /.nx/workspace-data
-public/
-routes/
-storage/
-tests/
+/public
 /tmp
+/vendor
 .env.*
 *.sh
