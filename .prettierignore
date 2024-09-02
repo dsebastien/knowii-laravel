@@ -13,3 +13,7 @@
 /vendor
 .env.*
 *.sh
+composer.lock
+CHANGELOG.md
+package-lock.json
+tsconfig.*.json

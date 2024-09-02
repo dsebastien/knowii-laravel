@@ -15,10 +15,7 @@ export default {
     '../../vendor/laravel/jetstream/**/*.blade.php',
     '../../storage/framework/views/*.php',
     '../../resources/views/**/*.blade.php',
-    join(
-      __dirname,
-      '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'
-    ),
+    join(__dirname, '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {

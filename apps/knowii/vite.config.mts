@@ -10,7 +10,7 @@ import type { UserConfig } from 'vite';
 const buildFolder = '../../public/build';
 
 const viteConfig = defineConfig({
-  cacheDir: 'dist/.vite/apps/knowii',
+  cacheDir: '../../dist/.vite/apps/knowii',
 
   // Public assets are served by Laravel and managed separately
   publicDir: false,
@@ -46,7 +46,7 @@ const viteConfig = defineConfig({
         '**/vendor/**',
       ],
     },
-   },
+  },
 
   preview: {
     port: 4300,

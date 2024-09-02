@@ -1,4 +1,5 @@
 # TODO
+
 - add prettier format
 - format using prettier
 - review fixmes
@@ -8,8 +9,6 @@
 - tsconfig: "include": ["resources/js/**/*.ts", "resources/js/**/*.tsx", "resources/js/**/*.d.ts"]
 - Review CI config
 - update theme to match the PrimeReact theme: primereact/resources/themes/lara-light-pink/theme.css
-
-
 
 - TODO, persistent layout: https://inertiajs.com/pages
 - Convert Vue component props to use TS. Example: `const props = defineProps<{ mustVerifyEmail: boolean, status: string, userTs: User }>();`
@@ -39,7 +38,7 @@
 - Create a script to reset the DB, run migrations, and seed the DB
 - Add Storybook. Related: https://github.com/area17/blast
 - When trying to delete a community, protect by asking the user to enter the full name and the action: https://jetstream.laravel.com/features/password-confirmation.html
-- Enable moving resources from one community to another 
+- Enable moving resources from one community to another
 - Enable team invitations: https://jetstream.laravel.com/features/teams.html#invitations
 - Require terms of service/privacy policy approval: https://jetstream.laravel.com/features/registration.html#requiring-terms-of-service-privacy-policy-approval
 - Create filament admin panel
@@ -63,11 +62,7 @@ expect(getByText(/Welcome/gi)).toBeTruthy();
 });
 });
 
-
-
-
 common.spec.ts
-
 
 import { common } from './common';
 
@@ -76,6 +71,5 @@ it('should work', () => {
 expect(common()).toEqual('common');
 });
 });
-
 
 - Add prettier plugin for PHP once this is fixed: https://github.com/nrwl/nx/issues/21250#issuecomment-2324649563
