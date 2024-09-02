@@ -1,12 +1,11 @@
 {
-  "name": "laravel/laravel",
+  "name": "knowii-oss/knowii",
   "type": "project",
-  "description": "The skeleton application for the Laravel framework.",
+  "description": "Knowii",
   "keywords": [
-    "laravel",
-    "framework"
+    "knowii"
   ],
-  "license": "MIT",
+  "license": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3",
   "require": {
     "php": "^8.2",
     "inertiajs/inertia-laravel": "^1.0",
