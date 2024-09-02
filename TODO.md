@@ -1,5 +1,6 @@
 # TODO
-
+- add prettier format
+- format using prettier
 - review fixmes
 - npm dependency versions
 - index.d.ts
