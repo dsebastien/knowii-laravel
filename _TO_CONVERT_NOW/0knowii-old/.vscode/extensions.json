@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "attilabuti.vscode-mjml",
+    "dbaeumer.vscode-eslint",
+    "denoland.vscode-deno",
+    "esbenp.prettier-vscode",
+    "firsttris.vscode-jest-runner",
+    "ms-playwright.playwright"
+  ]
+}

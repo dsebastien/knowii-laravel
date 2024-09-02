@@ -1,0 +1,14 @@
+# Add files here to ignore them from prettier formatting
+/dist
+/coverage
+node_modules/
+/.nx/cache
+/.nx/workspace-data
+/apps/app/.next
+../apps/app/.env.example
+.env.*
+*.sh
+pnpm-lock.yaml
+package-lock.json
+/tmp
+supabase-db-seed.sql

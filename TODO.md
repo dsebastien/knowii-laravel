@@ -1,5 +1,9 @@
 # TODO
 
+- Add constants for routes
+- Migrate login page
+- Migrate registration page
+- Inspiration: https://github.com/rjvim/jetstream-in-react/commit/9bbe81cf8664182d6aa9fdc049a51f1c96e9b8d8
 - review fixmes
 - npm dependency versions
 - Find how to deploy to Laravel Forge
