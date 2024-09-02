@@ -8,8 +8,6 @@ import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { PrimeReactProvider } from 'primereact/api';
 
-import {RouteContext} from '@knowii/common';
-
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
@@ -20,11 +18,11 @@ createInertiaApp({
 
     root.render(
       <StrictMode>
-        <RouteContext.Provider value={(window as any).route}>
-          <PrimeReactProvider>
-            <App {...props} />
-          </PrimeReactProvider>
-        </RouteContext.Provider>
+        <PrimeReactProvider value={{
+          ripple: true,
+        }}>
+          <App {...props} />
+        </PrimeReactProvider>
       </StrictMode>
     );
   },
