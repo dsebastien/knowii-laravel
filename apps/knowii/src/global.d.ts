@@ -6,7 +6,5 @@ declare global {
     axios: AxiosInstance;
   }
 
-  var route: typeof ziggyRoute;
+  let route: typeof ziggyRoute;
 }
-
-consfg;

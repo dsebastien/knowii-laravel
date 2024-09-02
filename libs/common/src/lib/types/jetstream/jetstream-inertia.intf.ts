@@ -32,13 +32,13 @@ export interface Auth {
   >;
 }
 
-export type InertiaSharedProps<T = {}> = T & {
+export type InertiaSharedProps<T = NonNullable<unknown>> = T & {
   jetstream: {
     canCreateTeams: boolean;
     canManageTwoFactorAuthentication: boolean;
     canUpdatePassword: boolean;
     canUpdateProfileInformation: boolean;
-    flash: any;
+    flash: Record<string, string>;
     hasAccountDeletionFeatures: boolean;
     hasApiFeatures: boolean;
     hasTeamFeatures: boolean;
@@ -47,7 +47,10 @@ export type InertiaSharedProps<T = {}> = T & {
     hasEmailVerification: boolean;
   };
   auth: Auth;
+  // FIXME improve types
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   errorBags: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   errors: any;
 };
 
