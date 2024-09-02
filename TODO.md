@@ -76,3 +76,6 @@ it('should work', () => {
 expect(common()).toEqual('common');
 });
 });
+
+
+- Add prettier plugin for PHP once this is fixed: https://github.com/nrwl/nx/issues/21250#issuecomment-2324649563

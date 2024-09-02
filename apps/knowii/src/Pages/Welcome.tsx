@@ -1,56 +1,62 @@
-import {Head} from '@inertiajs/react';
-import {PageProps} from '@/types';
-import Hello from "@/Components/hello";
-import { foo } from "@knowii/common";
+import {Head, Link} from '@inertiajs/react';
+import {useRoute} from "ziggy-js";
+import React from "react";
+import {useTypedPage} from "@knowii/common";
 
-export default function Welcome({laravelVersion, phpVersion}: PageProps<{
-  laravelVersion: string,
-  phpVersion: string
-}>) {
+interface WelcomePageProps {
+  canLogin: boolean;
+  canRegister: boolean;
+  laravelVersion: string;
+  phpVersion: string;
+}
+
+export default function Welcome({
+                                  canLogin,
+                                  canRegister,
+                                  laravelVersion,
+                                  phpVersion,
+                                }: WelcomePageProps) {
+  const route = useRoute();
+  const page = useTypedPage();
+
   return (
     <>
       <Head title="Welcome"/>
-      <header>
-        Header
-      </header>
+      <div
+        className="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
+        {canLogin ? (
+          <div className="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
+            {page.props.auth.user ? (
+              <Link
+                href={route('dashboard')}
+                className="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+              >
+                Dashboard
+              </Link>
+            ) : (
+              <>
+                <Link
+                  href={route('login')}
+                  className="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                >
+                  Log in
+                </Link>
 
-      {/*{auth.user ? (*/}
-        {/*  <Link*/}
-        {/*    href={route('dashboard')}*/}
-        {/*    className="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"*/}
-        {/*  >*/}
-        {/*    Dashboard*/}
-        {/*  </Link>*/}
-        {/*) : (*/}
-        {/*  <>*/}
-        {/*    <Link*/}
-        {/*      href={route('login')}*/}
-        {/*      className="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"*/}
-        {/*    >*/}
-        {/*      Log in*/}
-        {/*    </Link>*/}
-        {/*    <Link*/}
-        {/*      href={route('register')}*/}
-        {/*      className="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"*/}
-        {/*    >*/}
-        {/*      Register*/}
-        {/*    </Link>*/}
-        {/*  </>*/}
-        {/*)}*/}
+                {canRegister ? (
+                  <Link
+                    href={route('register')}
+                    className="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                  >
+                    Register
+                  </Link>
+                ) : null}
+              </>
+            )}
+          </div>
+        ) : null}
 
-      <main className="mt-6">
-        Hello world {foo}
-
-        <Hello />
-
-
-
-      </main>
-
-      <footer className="py-16 text-center text-sm text-black dark:text-white/70">
         Laravel v{laravelVersion} (PHP v{phpVersion})
-      </footer>
+      </div>
     </>
-  )
-    ;
+  );
 }
