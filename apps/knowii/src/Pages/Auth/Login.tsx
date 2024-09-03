@@ -2,7 +2,6 @@ import { Link, useForm, Head } from '@inertiajs/react';
 import classNames from 'classnames';
 import React, { FormEventHandler } from 'react';
 import AuthenticationCard from '@/Components/AuthenticationCard';
-import Checkbox from '@/Components/Checkbox';
 import InputLabel from '@/Components/InputLabel';
 import InputError from '@/Components/InputError';
 import { useRoute } from 'ziggy-js';
@@ -10,6 +9,7 @@ import { FORGOT_PASSWORD_URL, LOGIN_URL, REGISTER_URL } from '@knowii/common';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { FaPassport, FaUser } from 'react-icons/fa';
+import { Checkbox } from 'primereact/checkbox';
 
 interface Props {
   canResetPassword: boolean;
@@ -22,7 +22,7 @@ export default function Login({ canResetPassword, status }: Props) {
   const form = useForm({
     email: '',
     password: '',
-    remember: false,
+    remember: '',
   });
 
   const submit: FormEventHandler = (e) => {
@@ -53,7 +53,7 @@ export default function Login({ canResetPassword, status }: Props) {
                 value={form.data.email}
                 onChange={(e) => form.setData('email', e.target.value)}
                 autoComplete="username"
-                isFocused={true}
+                autoFocus={true}
                 required
               />
             </div>
@@ -81,7 +81,11 @@ export default function Login({ canResetPassword, status }: Props) {
 
           <div className="mt-4">
             <label className="flex items-center">
-              <Checkbox name="remember" checked={form.data.remember} onChange={(e) => form.setData('remember', e.target.checked)} />
+              <Checkbox
+                name="remember"
+                checked={form.data.remember === 'on'}
+                onChange={(e) => form.setData('remember', e.target.checked ? 'on' : '')}
+              />
               <span className="ms-2 text-sm text-gray-600">Remember me</span>
             </label>
           </div>
