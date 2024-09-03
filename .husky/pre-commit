@@ -1,0 +1,4 @@
+#!/bin/sh
+# FIXME re-enable linting
+#npm run lint
+npm run format:affected

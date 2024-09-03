@@ -64,7 +64,6 @@ expect(common()).toEqual('common');
 - Add Husky
 - Review CI config
 
-
 setup({ el, App, props }) {
 if (import.meta.env.DEV) {
 createRoot(el).render(<App {...props} />);
