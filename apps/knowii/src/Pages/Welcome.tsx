@@ -23,9 +23,7 @@ export default function Welcome({ canLogin, canRegister }: WelcomePageProps) {
       <div className="bg-gray-50 text-black/80 full-page">
         <header
           className="p-4 md:p-6 lg:p-12 bg-gray-800 flex flex-col md:flex-row flex-wrap items-center justify-between">
-          <Link href={route(HOME_URL)} className="">
             <ApplicationLogo />
-          </Link>
           {canLogin ? (
             <>
               <div className="flex flex-row">
