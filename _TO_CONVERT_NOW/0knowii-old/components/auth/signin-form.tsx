@@ -39,10 +39,7 @@ export function SigninForm() {
                 </InputLeftElement>
 
                 <Input
-                  required
-                  isRequired
-                  type="email"
-                  autoComplete="email"
+                  require
                   {...register('email', {
                     required: true,
                   })}
