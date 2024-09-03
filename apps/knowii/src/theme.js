@@ -144,7 +144,8 @@ module.exports = {
         900: 'var(--bluegray-900)',
         950: 'var(--bluegray-950)',
       },
-      gray: { // same as bluegray, just for DX
+      gray: {
+        // same as bluegray, just for DX
         DEFAULT: 'var(--bluegray-500)',
         50: 'var(--bluegray-50)',
         100: 'var(--bluegray-100)',
