@@ -1,5 +1,5 @@
-import { Link, useForm } from "@inertiajs/react";
-import React, { FormEvent } from "react";
+import { Link, useForm } from '@inertiajs/react';
+import React, { FormEvent } from 'react';
 
 interface Props {
   status?: string;
@@ -11,7 +11,7 @@ function VerifyEmail({ status }: Props) {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    post("/email/verification-notification");
+    post('/email/verification-notification');
   };
 
   return (
@@ -25,15 +25,13 @@ function VerifyEmail({ status }: Props) {
       <div className="max-w-xl p-4 mx-auto">
         <h1 className="text-3xl text-center">Verify Email</h1>
         <p className="mt-4 text-center">
-          Thanks for signing up! Before getting started, could you verify your email address by
-          clicking on the link we just emailed to you? If you didn't receive the email, we will
-          gladly send you another.
+          Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you?
+          If you didn't receive the email, we will gladly send you another.
         </p>
 
-        {status === "verification-link-sent" && (
+        {status === 'verification-link-sent' && (
           <div className="mb-4 text-sm font-medium text-green-600 dark:text-green-400">
-            A new verification link has been sent to the email address you provided during
-            registration.
+            A new verification link has been sent to the email address you provided during registration.
           </div>
         )}
 

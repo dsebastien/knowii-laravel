@@ -1,10 +1,10 @@
-import React from "react";
-import SectionBorder from "./components/SectionBorder";
-import DeleteUserForm from "./components/DeleteUserForm";
-import UpdatePasswordForm from "./components/UpdatePasswordForm";
-import UpdateProfileInformationForm from "./components/UpdateProfileInformationForm";
-import Layout from "../../layouts/Layout";
-import UpdateProfilePhoto from "./components/UpdateProfilePhoto";
+import React from 'react';
+import SectionBorder from './components/SectionBorder';
+import DeleteUserForm from './components/DeleteUserForm';
+import UpdatePasswordForm from './components/UpdatePasswordForm';
+import UpdateProfileInformationForm from './components/UpdateProfileInformationForm';
+import Layout from '../../layouts/Layout';
+import UpdateProfilePhoto from './components/UpdateProfilePhoto';
 
 function Profile() {
   return (

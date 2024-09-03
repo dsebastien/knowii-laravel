@@ -1,5 +1,5 @@
-import React from "react";
-import Layout from "../layouts/Layout";
+import React from 'react';
+import Layout from '../layouts/Layout';
 
 function Home() {
   return (

@@ -1,6 +1,6 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
-import backgroundImage from "./assets/images/auth-image.jpg";
-import { Link, usePage, router } from "@inertiajs/react";
+import React, { ChangeEvent, FormEvent, useState } from 'react';
+import backgroundImage from './assets/images/auth-image.jpg';
+import { Link, usePage, router } from '@inertiajs/react';
 
 interface Props {
   status?: string;
@@ -8,8 +8,8 @@ interface Props {
 
 function Login({ status }: Props) {
   const [form, setForm] = useState({
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   });
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
@@ -23,7 +23,7 @@ function Login({ status }: Props) {
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    router.post("/login", {
+    router.post('/login', {
       email: form.email,
       password: form.password,
     });
@@ -76,15 +76,11 @@ function Login({ status }: Props) {
                 {errors.password && <div className="text-sm text-red-500">{errors.password}</div>}
               </div>
 
-              <input
-                type="submit"
-                value="Log In"
-                className="p-2 mt-8 text-lg font-bold text-white bg-black hover:bg-gray-700"
-              />
+              <input type="submit" value="Log In" className="p-2 mt-8 text-lg font-bold text-white bg-black hover:bg-gray-700" />
             </form>
             <div className="pt-12 pb-12 text-center">
               <p>
-                Don't have an account?{" "}
+                Don't have an account?{' '}
                 <Link href="/register" className="font-semibold underline">
                   Register here.
                 </Link>

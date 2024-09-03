@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useRef, MouseEvent } from "react";
-import { usePage, router } from "@inertiajs/react";
+import React, { useState, useEffect, useRef, MouseEvent } from 'react';
+import { usePage, router } from '@inertiajs/react';
 
 function UpdateProfileInformationForm() {
-  const [nameForm, setNameForm] = useState("");
-  const [emailForm, setEmailForm] = useState("");
+  const [nameForm, setNameForm] = useState('');
+  const [emailForm, setEmailForm] = useState('');
 
   const auth = usePage().props as any;
   const errors = usePage().props.errors;
 
   function handleSubmit(e: MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
-    router.post("user/profile-information", {
-      _method: "put",
+    router.post('user/profile-information', {
+      _method: 'put',
       name: nameForm,
       email: emailForm,
     });
@@ -28,10 +28,7 @@ function UpdateProfileInformationForm() {
         {/* left side */}
         <div className="md:col-span-1">
           <h3 className="text-lg font-medium text-gray-900"> Profile Information </h3>
-          <p className="mt-1 text-sm text-gray-600">
-            {" "}
-            Update your account's profile information and email address.{" "}
-          </p>
+          <p className="mt-1 text-sm text-gray-600"> Update your account's profile information and email address. </p>
         </div>
         {/* right side */}
         <div className="mt-5 md:mt-0 md:col-span-2">
@@ -49,11 +46,7 @@ function UpdateProfileInformationForm() {
                     onChange={(e) => setNameForm(e.target.value)}
                     className="block w-full h-10 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   />
-                  {errors.updateProfileInformation && (
-                    <div className="text-sm text-red-500">
-                      {errors.updateProfileInformation.name}
-                    </div>
-                  )}
+                  {errors.updateProfileInformation && <div className="text-sm text-red-500">{errors.updateProfileInformation.name}</div>}
                 </div>
 
                 {/* email */}
@@ -67,11 +60,7 @@ function UpdateProfileInformationForm() {
                     onChange={(e) => setEmailForm(e.target.value)}
                     className="block w-full h-10 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   />
-                  {errors.updateProfileInformation && (
-                    <div className="text-sm text-red-500">
-                      {errors.updateProfileInformation.email}
-                    </div>
-                  )}
+                  {errors.updateProfileInformation && <div className="text-sm text-red-500">{errors.updateProfileInformation.email}</div>}
                 </div>
               </div>
             </div>

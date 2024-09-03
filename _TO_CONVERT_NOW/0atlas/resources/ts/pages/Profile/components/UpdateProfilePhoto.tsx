@@ -1,6 +1,6 @@
-import React, { useState, useRef, MouseEvent } from "react";
-import { usePage, router } from "@inertiajs/react";
-import { profilePhoto } from "../../../utils/profilePhoto";
+import React, { useState, useRef, MouseEvent } from 'react';
+import { usePage, router } from '@inertiajs/react';
+import { profilePhoto } from '../../../utils/profilePhoto';
 
 function UpdateProfilePhoto() {
   const [photoPreview, setPhotoPreview] = useState<string | ArrayBuffer | null | undefined>(null);
@@ -31,7 +31,7 @@ function UpdateProfilePhoto() {
 
   function deletePhoto(e: MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
-    router.delete("/profilePhotoDelete", {
+    router.delete('/profilePhotoDelete', {
       preserveScroll: true,
       onSuccess: () => setPhotoPreview(null),
     });
@@ -43,9 +43,9 @@ function UpdateProfilePhoto() {
     }
 
     router.post(
-      "/profilePhotoUpdate",
+      '/profilePhotoUpdate',
       {
-        _method: "put",
+        _method: 'put',
         photo: photoForm.current,
         forceFormData: true,
       },
@@ -53,7 +53,7 @@ function UpdateProfilePhoto() {
         onSuccess: () => {
           setReRender(!reRender);
         },
-      }
+      },
     );
   }
 
@@ -64,9 +64,7 @@ function UpdateProfilePhoto() {
         <div className="md:col-span-1">
           <div className="px-4 sm:px-0">
             <h3 className="text-lg font-medium text-gray-900"> Update Profile Photo</h3>
-            <p className="mt-1 text-sm text-gray-600">
-              Ensure your account is using a long, random password to stay secure.
-            </p>
+            <p className="mt-1 text-sm text-gray-600">Ensure your account is using a long, random password to stay secure.</p>
           </div>
         </div>
 
@@ -87,11 +85,7 @@ function UpdateProfilePhoto() {
                   {!photoPreview && (
                     <div className="mt-2">
                       <img
-                        src={
-                          auth.user.photo_name
-                            ? `/storage/profilePhotos/${auth.user.photo_name}`
-                            : profilePhoto(auth.user.name)
-                        }
+                        src={auth.user.photo_name ? `/storage/profilePhotos/${auth.user.photo_name}` : profilePhoto(auth.user.name)}
                         alt=""
                         className="object-cover w-20 h-20 rounded-full"
                       />
@@ -104,9 +98,9 @@ function UpdateProfilePhoto() {
                       <span
                         className="block w-20 h-20 rounded-full"
                         style={{
-                          backgroundSize: "cover",
-                          backgroundRepeat: "no-repeat",
-                          backgroundPosition: "center center",
+                          backgroundSize: 'cover',
+                          backgroundRepeat: 'no-repeat',
+                          backgroundPosition: 'center center',
                           backgroundImage: `url( "${photoPreview}" )`,
                         }}
                       ></span>

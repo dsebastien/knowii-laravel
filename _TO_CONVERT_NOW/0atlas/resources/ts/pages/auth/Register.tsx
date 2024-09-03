@@ -1,14 +1,14 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
-import { router } from "@inertiajs/react";
-import { Link, usePage } from "@inertiajs/react";
-import backgroundImage from "./assets/images/auth-image.jpg";
+import React, { ChangeEvent, FormEvent, useState } from 'react';
+import { router } from '@inertiajs/react';
+import { Link, usePage } from '@inertiajs/react';
+import backgroundImage from './assets/images/auth-image.jpg';
 
 function Register() {
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
   });
 
   const errors = usePage().props.errors;
@@ -24,7 +24,7 @@ function Register() {
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    router.post("/register", {
+    router.post('/register', {
       name: form.name,
       email: form.email,
       password: form.password,
@@ -113,15 +113,11 @@ function Register() {
                 />
               </div>
 
-              <input
-                type="submit"
-                value="Register"
-                className="p-2 mt-8 text-lg font-bold text-white bg-black hover:bg-gray-700"
-              />
+              <input type="submit" value="Register" className="p-2 mt-8 text-lg font-bold text-white bg-black hover:bg-gray-700" />
             </form>
             <div className="pt-12 pb-12 text-center">
               <p>
-                Already have an account?{" "}
+                Already have an account?{' '}
                 <Link href="/login" className="font-semibold underline">
                   Log in here.
                 </Link>
@@ -132,11 +128,7 @@ function Register() {
 
         {/* Image Section  */}
         <div className="w-1/2 shadow-2xl">
-          <img
-            className="hidden object-cover w-full h-screen md:block"
-            src={backgroundImage}
-            alt="Background"
-          />
+          <img className="hidden object-cover w-full h-screen md:block" src={backgroundImage} alt="Background" />
         </div>
       </div>
     </div>

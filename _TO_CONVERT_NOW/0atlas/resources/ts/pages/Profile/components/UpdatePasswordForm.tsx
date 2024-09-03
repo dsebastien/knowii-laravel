@@ -1,10 +1,10 @@
-import React, { useState, useRef, MouseEvent } from "react";
-import { usePage, router } from "@inertiajs/react";
+import React, { useState, useRef, MouseEvent } from 'react';
+import { usePage, router } from '@inertiajs/react';
 
 function UpdatePasswordForm() {
-  const [currentPasswordForm, setCurrentPasswordForm] = useState("");
-  const [passwordForm, setPasswordForm] = useState("");
-  const [passwordConfirmationForm, setPasswordConfirmationForm] = useState("");
+  const [currentPasswordForm, setCurrentPasswordForm] = useState('');
+  const [passwordForm, setPasswordForm] = useState('');
+  const [passwordConfirmationForm, setPasswordConfirmationForm] = useState('');
   const currentPasswordRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const passwordConfimationRef = useRef<HTMLInputElement>(null);
@@ -14,9 +14,9 @@ function UpdatePasswordForm() {
   function handleSubmit(e: MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     router.put(
-      "user/password",
+      'user/password',
       {
-        _method: "put",
+        _method: 'put',
         current_password: currentPasswordForm,
         password: passwordForm,
         password_confirmation: passwordConfirmationForm,
@@ -24,23 +24,23 @@ function UpdatePasswordForm() {
       },
       {
         onSuccess: () => {
-          setCurrentPasswordForm("");
-          setPasswordForm("");
-          setPasswordConfirmationForm("");
+          setCurrentPasswordForm('');
+          setPasswordForm('');
+          setPasswordConfirmationForm('');
         },
         onError: (errors: any) => {
           if (errors.updatePassword.current_password) {
-            setCurrentPasswordForm("");
+            setCurrentPasswordForm('');
             currentPasswordRef.current?.focus();
           }
 
           if (errors.updatePassword.password) {
-            setPasswordForm("");
+            setPasswordForm('');
             passwordRef.current?.focus();
-            setPasswordConfirmationForm("");
+            setPasswordConfirmationForm('');
           }
         },
-      }
+      },
     );
   }
 
@@ -51,9 +51,7 @@ function UpdatePasswordForm() {
         <div className="md:col-span-1">
           <div className="px-4 sm:px-0">
             <h3 className="text-lg font-medium text-gray-900"> Update Password </h3>
-            <p className="mt-1 text-sm text-gray-600">
-              Ensure your account is using a long, random password to stay secure.
-            </p>
+            <p className="mt-1 text-sm text-gray-600">Ensure your account is using a long, random password to stay secure.</p>
           </div>
         </div>
 
@@ -63,10 +61,7 @@ function UpdatePasswordForm() {
             <div className="px-4 py-5 bg-white shadow sm:p-6 sm:rounded-tl-md sm:rounded-tr-md">
               <div className="grid grid-cols-6 gap-6">
                 <div className="col-span-6 sm:col-span-4">
-                  <label
-                    className="block text-sm font-medium text-gray-700"
-                    htmlFor="current_password"
-                  >
+                  <label className="block text-sm font-medium text-gray-700" htmlFor="current_password">
                     <span>Current Password</span>
                   </label>
                   <input
@@ -78,11 +73,7 @@ function UpdatePasswordForm() {
                     type="password"
                     autoComplete="current-password"
                   />
-                  {errors.updatePassword && (
-                    <div className="mt-2 text-sm text-red-500">
-                      {errors.updatePassword.current_password}
-                    </div>
-                  )}
+                  {errors.updatePassword && <div className="mt-2 text-sm text-red-500">{errors.updatePassword.current_password}</div>}
                   <div className="mt-2">
                     <p className="text-sm text-red-600"></p>
                   </div>
@@ -101,18 +92,11 @@ function UpdatePasswordForm() {
                     type="password"
                     autoComplete="new-password"
                   />
-                  {errors.updatePassword && (
-                    <div className="mt-2 text-sm text-red-500">
-                      {errors.updatePassword.password}
-                    </div>
-                  )}
+                  {errors.updatePassword && <div className="mt-2 text-sm text-red-500">{errors.updatePassword.password}</div>}
                 </div>
 
                 <div className="col-span-6 sm:col-span-4">
-                  <label
-                    className="block text-sm font-medium text-gray-700"
-                    htmlFor="password_confirmation"
-                  >
+                  <label className="block text-sm font-medium text-gray-700" htmlFor="password_confirmation">
                     <span>Confirm Password</span>
                   </label>
                   <input
