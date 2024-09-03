@@ -9,8 +9,6 @@ import ApplicationHeader from '@/Components/ApplicationHeader';
 interface WelcomePageProps {
   canLogin: boolean;
   canRegister: boolean;
-  laravelVersion: string;
-  phpVersion: string;
 }
 
 export default function Welcome({ canLogin, canRegister }: WelcomePageProps) {
