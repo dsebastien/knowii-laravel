@@ -1,9 +1,9 @@
-import {Head, Link} from '@inertiajs/react';
-import {useRoute} from 'ziggy-js';
+import { Head, Link } from '@inertiajs/react';
+import { useRoute } from 'ziggy-js';
 import React from 'react';
-import {useTypedPage} from '@knowii/common';
-import ApplicationLogo from "@/Components/ApplicationLogo";
-import {Button} from "primereact/button";
+import { DASHBOARD_URL, HOME_URL, LOGIN_URL, REGISTER_URL, useTypedPage } from '@knowii/common';
+import ApplicationLogo from '@/Components/ApplicationLogo';
+import { Button } from 'primereact/button';
 
 interface WelcomePageProps {
   canLogin: boolean;
@@ -12,34 +12,36 @@ interface WelcomePageProps {
   phpVersion: string;
 }
 
-export default function Welcome({canLogin, canRegister}: WelcomePageProps) {
+export default function Welcome({ canLogin, canRegister }: WelcomePageProps) {
   const route = useRoute();
   const page = useTypedPage();
 
   return (
     <>
-      <Head title="Welcome"/>
+      <Head title="Welcome" />
 
       <div className="bg-gray-50 text-black/80 full-page">
         <header
           className="p-4 md:p-6 lg:p-12 bg-gray-800 flex flex-col md:flex-row flex-wrap items-center justify-between">
-          <ApplicationLogo/>
+          <Link href={route(HOME_URL)} className="">
+            <ApplicationLogo />
+          </Link>
           {canLogin ? (
             <>
               <div className="flex flex-row">
                 <div className="flex flex-col sm:flex-row flex-wrap gap-4">
                   {page.props.auth.user ? (
                     <Button className="text-3xl font-mono font-bold px-8">
-                      <Link href={route('dashboard')} className="">Dashboard</Link>
+                      <Link href={route(DASHBOARD_URL)} className="">Dashboard</Link>
                     </Button>) : (
                     <>
-                      <Link href={route('login')} className="">
+                      <Link href={route(LOGIN_URL} className="">
                         <Button className="text-3xl font-mono">
                           Login
                         </Button>
                       </Link>
                       {canRegister &&
-                        <Link href={route('register')} className=""><Button
+                        <Link href={route(REGISTER_URL} className=""><Button
                           className="text-3xl font-mono font-bold px-8">Register
                         </Button></Link>}
                     </>)}

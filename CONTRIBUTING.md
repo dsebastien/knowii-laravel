@@ -72,8 +72,6 @@ If you want to run the production version locally, you can:
 
 See `./config/fortify.php` for configuration options.
 
-
-
 ## Submission guidelines
 
 ### Submitting an issue
