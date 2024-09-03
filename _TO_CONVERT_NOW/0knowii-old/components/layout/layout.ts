@@ -1,18 +1,4 @@
-import { useBreakpointValue } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-
-export function useMobileBreakpoint() {
-  return useBreakpointValue(
-    {
-      base: true,
-      lg: false,
-    },
-    {
-      ssr: true,
-      fallback: 'lg',
-    },
-  );
-}
 
 export function useScrollTop() {
   const [isTop, setIsTop] = useState(true);

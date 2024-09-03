@@ -8,6 +8,7 @@ import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import InputError from '@/Components/InputError';
 import { useRoute } from 'ziggy-js';
+import { FORGOT_PASSWORD_URL, LOGIN_URL, REGISTER_URL } from '@knowii/common';
 
 interface Props {
   canResetPassword: boolean;
@@ -24,7 +25,7 @@ export default function Login({ canResetPassword, status }: Props) {
 
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
-    form.post(route('login'), {
+    form.post(route(LOGIN_URL), {
       onFinish: () => form.reset('password'),
     });
   }
@@ -79,7 +80,7 @@ export default function Login({ canResetPassword, status }: Props) {
           {canResetPassword && (
             <div>
               <Link
-                href={route('password.request')}
+                href={route(FORGOT_PASSWORD_URL)}
                 className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Forgot your password?
@@ -89,7 +90,7 @@ export default function Login({ canResetPassword, status }: Props) {
 
           <div className="flex items-center justify-end">
             <Link
-              href={route('register')}
+              href={route(REGISTER_URL)}
               className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               Need an account?

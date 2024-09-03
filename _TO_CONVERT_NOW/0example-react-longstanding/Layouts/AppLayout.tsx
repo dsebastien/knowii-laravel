@@ -11,6 +11,7 @@ import DropdownLink from '@/Components/DropdownLink';
 import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Team } from '@/types';
+import { LOGOUT_URL } from '@knowii/common';
 
 interface Props {
   title: string;
@@ -37,7 +38,7 @@ export default function AppLayout({ title, renderHeader, children }: PropsWithCh
 
   function logout(e: React.FormEvent) {
     e.preventDefault();
-    router.post(route('logout'));
+    router.post(route(LOGOUT_URL));
   }
 
   return (

@@ -17,7 +17,11 @@ export const IS_TEST = process.env.NODE_ENV === 'test';
 export const HOME_URL = '/';
 export const LOGIN_URL = 'login';
 export const REGISTER_URL = 'register';
+export const LOGOUT_URL = 'logout';
 export const DASHBOARD_URL = 'dashboard';
+export const PASSWORD_CONFIRM_URL = 'password.confirm';
+export const PASSWORD_CONFIRMATION_URL = 'password.confirmation';
+export const FORGOT_PASSWORD_URL = 'password.request';
 
 /**
  * API

@@ -17,11 +17,11 @@ import { CustomPageProps } from '../_app';
 import { ParsedUrlQuery } from 'querystring';
 
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const siteAuthor = require('../../../../../0knowii-old/metadata.json').author;
+const siteAuthor = require('../../metadata.json').author;
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const siteAuthorAvatar = require('../../../../../0knowii-old/metadata.json').avatars.sebastien;
+const siteAuthorAvatar = require('../../metadata.json').avatars.sebastien;
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const siteAuthorLink = require('../../../../../0knowii-old/metadata.json').social.twitterSebastien;
+const siteAuthorLink = require('../../metadata.json').social.twitterSebastien;
 
 interface MdxFilePathParams extends ParsedUrlQuery {
   slug: string;

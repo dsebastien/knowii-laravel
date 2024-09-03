@@ -6,19 +6,19 @@ import { useRouter } from 'next/router';
 import { NavBar } from './nav-bar';
 
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const site = require('../../../../../0knowii-old/metadata.json').siteName;
+const site = require('../../metadata.json').siteName;
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const siteAuthor = require('../../../../../0knowii-old/metadata.json').author;
+const siteAuthor = require('../../metadata.json').author;
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const siteAuthorAlias = require('../../../../../0knowii-old/metadata.json').authorAlias;
+const siteAuthorAlias = require('../../metadata.json').authorAlias;
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const siteDescription = require('../../../../../0knowii-old/metadata.json').description;
+const siteDescription = require('../../metadata.json').description;
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const siteKeywords = require('../../../../../0knowii-old/metadata.json').keywords;
+const siteKeywords = require('../../metadata.json').keywords;
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const siteTitle = require('../../../../../0knowii-old/metadata.json').title;
+const siteTitle = require('../../metadata.json').title;
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const siteUrl = require('../../../../../0knowii-old/metadata.json').url;
+const siteUrl = require('../../metadata.json').url;
 
 /**
  * Page metadata that pages can customize

@@ -7,6 +7,7 @@ import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import SecondaryButton from '@/Components/SecondaryButton';
 import { useRoute } from 'ziggy-js';
+import { PASSWORD_CONFIRM_URL, PASSWORD_CONFIRMATION_URL } from '@knowii/common';
 
 interface Props {
   title?: string;
@@ -32,7 +33,7 @@ export default function ConfirmsPassword({
   const passwordRef = useRef<HTMLInputElement>(null);
 
   function startConfirmingPassword() {
-    axios.get(route('password.confirmation')).then((response) => {
+    axios.get(route(PASSWORD_CONFIRMATION_URL)).then((response) => {
       if (response.data.confirmed) {
         onConfirm();
       } else {
@@ -47,7 +48,7 @@ export default function ConfirmsPassword({
     setForm({ ...form, processing: true });
 
     axios
-      .post(route('password.confirm'), {
+      .post(route(PASSWORD_CONFIRM_URL), {
         password: form.password,
       })
       .then(() => {

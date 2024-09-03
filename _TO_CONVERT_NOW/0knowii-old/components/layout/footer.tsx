@@ -19,13 +19,13 @@ import { Logo } from '@knowii/client-ui';
 import { PRIVACY_POLICY_URL, TERMS_OF_USE_URL } from '@knowii/common';
 
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const author = require('../../../../../0knowii-old/metadata.json').author;
+const author = require('../../metadata.json').author;
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const contacts = require('../../../../../0knowii-old/metadata.json').contacts;
+const contacts = require('../../metadata.json').contacts;
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const social = require('../../../../../0knowii-old/metadata.json').social;
+const social = require('../../metadata.json').social;
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const sourceCodeUrl = require('../../../../../0knowii-old/metadata.json').sourceCodeUrl;
+const sourceCodeUrl = require('../../metadata.json').sourceCodeUrl;
 
 // eslint-disable-next-line
 interface FooterProps {}

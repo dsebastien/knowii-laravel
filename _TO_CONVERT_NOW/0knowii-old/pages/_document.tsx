@@ -7,13 +7,13 @@ import Script from 'next/script';
 import { i18nConfig } from '../../../i18n.config.mjs';
 
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const siteDescription = require('../../../../0knowii-old/metadata.json').description;
+const siteDescription = require('../metadata.json').description;
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const siteDomain = require('../../../../0knowii-old/metadata.json').domain;
+const siteDomain = require('../metadata.json').domain;
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const siteName = require('../../../../0knowii-old/metadata.json').siteName;
+const siteName = require('../metadata.json').siteName;
 // eslint-disable-next-line  @typescript-eslint/no-var-requires
-const siteTitle = require('../../../../0knowii-old/metadata.json').title;
+const siteTitle = require('../metadata.json').title;
 
 const siteMicrodata = {
   '@context': 'https://schema.org',
