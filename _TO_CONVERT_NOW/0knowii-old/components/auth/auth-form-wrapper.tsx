@@ -2,7 +2,6 @@ import { Box, Divider, Heading, SimpleGrid, Stack, Text, VStack } from '@chakra-
 import { PropsWithChildren, ReactElement } from 'react';
 import { Provider } from '@supabase/supabase-js';
 import SocialSigninButton from './social-signin-button';
-import { useTranslations } from 'next-intl';
 
 interface AuthFormWrapperProps {
   title: string;
@@ -20,8 +19,6 @@ export function AuthFormWrapper({
   redirectAfterSignin,
   enabledAuthProviders,
 }: PropsWithChildren<AuthFormWrapperProps>) {
-  const t = useTranslations('authFormWrapper');
-
   return (
     <VStack spacing={6} align="stretch">
       <Stack spacing={2}>
@@ -34,7 +31,7 @@ export function AuthFormWrapper({
         <>
           <Divider my={8} />
           <Heading as="h4" fontSize="lg" mb={3}>
-            {t('continueWith')}
+            Continue with...
           </Heading>
 
           <SimpleGrid columns={2} gap={2}>

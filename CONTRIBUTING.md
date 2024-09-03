@@ -47,9 +47,9 @@ Run `composer start` to start Sail, and Vite (the frontend development server).
 If you want more control you can run the parts separately:
 
 - Run `./vendor/bin/sail up` to start the back-end
-- Run `./vendor/bin/sail npm run dev` to start the front-end (inside of the Docker container)
+- Run `./vendor/bin/sail npm run dev` to start the front-end (inside the Docker container)
 
-WARNING: You have to start the front-end server inside of the Docker container, because it already reserves the port exposed by Vite.
+WARNING: You have to start the front-end server inside the Docker container, because it already reserves the port exposed by Vite.
 
 You can also use `./vendor/bin/sail bash` to get a shell within the container.
 

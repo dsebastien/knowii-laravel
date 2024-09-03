@@ -1,6 +1,6 @@
 # TODO
 
-- Add constants for routes
+- Retrieve old auth pages
 - Migrate login page
 - Migrate registration page
 - Inspiration: https://github.com/rjvim/jetstream-in-react/commit/9bbe81cf8664182d6aa9fdc049a51f1c96e9b8d8
@@ -76,3 +76,4 @@ return
 - Add Sentry: https://sentry.io/for/laravel/
 - Add Sonar
 - Generate OpenAPI docs: https://github.com/DarkaOnLine/L5-Swagger
+- https://github.com/laravel/jetstream/pull/1529
